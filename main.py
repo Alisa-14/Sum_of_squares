@@ -2,10 +2,10 @@ from functools import reduce
 
 
 def process_numbers(numbers):
-    positive_numb = filter(lambda x: x > 0 and x % 2 == 0, numbers)
-    squared_numb = map(lambda x: x ** 2, positive_numb)
-    sum_of_squared_numbers = reduce(lambda x, y: x + y, squared_numb, 0)
-    return sum_of_squared_numbers
+    positive = filter(lambda x: x > 0 and x % 2 == 0, numbers)
+    squared = map(lambda x: x ** 2, positive)
+    summa = reduce(lambda x, y: x + y, squared, 0)
+    return summa
 
 
 numbers = [1, 2, 3, 4, 5, 6, 7, -2, -4]
